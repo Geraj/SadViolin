@@ -8,4 +8,8 @@
         android:defaultValue="true"
         android:key="checkbox_touch"
         android:title="@string/touch" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="checkbox_proxy"
+        android:title="@string/proxy" />
 </PreferenceScreen>

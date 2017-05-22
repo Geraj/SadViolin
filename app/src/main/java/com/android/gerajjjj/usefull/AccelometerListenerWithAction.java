@@ -11,7 +11,7 @@ import android.util.Log;
  * Created by Gerajjjj on 1/28/2017.
  */
 
-public class SensorListenerWithAction implements SensorEventListener {
+public class AccelometerListenerWithAction implements SensorEventListener {
 
     private final float mAlpha = 0.8f;
     // Arrays for storing filtered values
@@ -25,7 +25,7 @@ public class SensorListenerWithAction implements SensorEventListener {
     private static final int STOP_SONG_ACTION_COUNT = 6;
     private static final int STOP_UPDATING_ACTION_COUNT = 4;
     private static final float CONSIDERED_ACTION = 0.5f;
-    private static final String TAG = "SensorListenerWithAction";
+    private static final String TAG = "AccelometerListenerWithAction";
 
     private ActionInterface actinToPerform;
 
@@ -33,7 +33,7 @@ public class SensorListenerWithAction implements SensorEventListener {
      *
      * @param action - action to perform
      */
-    public SensorListenerWithAction(ActionInterface action){
+    public AccelometerListenerWithAction(ActionInterface action){
         actinToPerform = action;
         mPreviousActionCount = START_ACTION_COUNT;
     }
@@ -57,7 +57,7 @@ public class SensorListenerWithAction implements SensorEventListener {
                 mAccel[2] = highPass(rawZ, mGravity[2]);
 
                 boolean isAction = Math.abs(mAccel[0]) + Math.abs(mAccel[1]) + Math.abs(mAccel[2]) > CONSIDERED_ACTION;
-                Log.i(TAG, "Action value: " +  Math.abs(mAccel[0])+Math.abs(mAccel[1])+ Math.abs(mAccel[2]) + " " +  mAccel[0] + " " + mAccel[1] + " " + mAccel[2] );
+                //Log.i(TAG, "Action value: " +  Math.abs(mAccel[0])+Math.abs(mAccel[1])+ Math.abs(mAccel[2]) + " " +  mAccel[0] + " " + mAccel[1] + " " + mAccel[2] );
                 //take into acount the previous actions
                 if (isAction) {
                     if (mPreviousActionCount <= MAX_VALID_ACTION_COUNT) {

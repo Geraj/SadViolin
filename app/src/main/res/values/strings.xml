@@ -11,6 +11,7 @@
 
     <string name="acceleration">Acceleration</string>
     <string name="touch">Touch</string>
+    <string name="proxy">Proximity</string>
 
     <!-- Example General settings -->
     <string name="pref_header_profile">Profile</string>
