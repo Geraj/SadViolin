@@ -1,0 +1,11 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="checkbox_acceleration"
+        android:title="@string/acceleration" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="checkbox_touch"
+        android:title="@string/touch" />
+</PreferenceScreen>
