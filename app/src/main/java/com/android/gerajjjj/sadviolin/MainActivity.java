@@ -21,10 +21,10 @@ import com.android.gerajjjj.usefull.ProximityListenerWithAction;
 import com.android.gerajjjj.usefull.TouchWithAction;
 
 /**
- *
+ * Main activity of app, listeners with action are added and maintained her
  */
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "Sad-Violin" ;
+    private static final String TAG = "Sad-Violin";
 
     private SensorManager mSensorManager;
     private Sensor mAccelerometer;
@@ -34,11 +34,12 @@ public class MainActivity extends AppCompatActivity {
     private TouchWithAction mTouchWithAction;
     private MediaPlayer mMediaPlayer;
     private ImageView mView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mView = (ImageView)findViewById(R.id.imageView);
+        mView = (ImageView) findViewById(R.id.imageView);
         mView.setImageDrawable(getResources().getDrawable(R.drawable.violintrans2));
         mView.setBackgroundColor(Color.BLACK);
 
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        if (getActionBar()!=null)
+        if (getActionBar() != null)
             getActionBar().hide();
         //createSoundPool();
         mMediaPlayer = MediaPlayer.create(this, R.raw.sadviolin);
@@ -111,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
-
 
 
 }

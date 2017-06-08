@@ -6,16 +6,24 @@ import android.view.VelocityTracker;
 import android.view.View;
 
 /**
+ * Reacts on touch events and invokes the action
+ *
  * Created by Gerajjjj on 1/28/2017.
  */
 
 public class TouchWithAction implements View.OnTouchListener {
+    // Action to invoke
     private ActionInterface action;
     private VelocityTracker mVelocityTracker = null;
     private static final int MINIMUM_VELOCITY = 75;
     private static final int MAX_CONSECUTIVE_MINIMUM = 5;
     private int strikes = 0;
     private int actionTracked = -1;
+
+    /**
+     * Constructs an instance
+     * @param action
+     */
     public TouchWithAction(ActionInterface action){
         this.action = action;
     };
