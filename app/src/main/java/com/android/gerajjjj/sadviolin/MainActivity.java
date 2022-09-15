@@ -8,16 +8,16 @@ import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.amazonaws.mobile.client.AWSMobileClient;
-import com.amazonaws.mobile.client.AWSStartupHandler;
-import com.amazonaws.mobile.client.AWSStartupResult;
+//import com.amazonaws.mobile.client.AWSMobileClient;
+//import com.amazonaws.mobile.client.AWSStartupHandler;
+//import com.amazonaws.mobile.client.AWSStartupResult;
 import com.android.gerajjjj.usefull.AccelometerListenerWithAction;
 import com.android.gerajjjj.usefull.PlayBackAction;
 import com.android.gerajjjj.usefull.ProximityListenerWithAction;
@@ -50,12 +50,12 @@ public class MainActivity extends AppCompatActivity {
         mAccelerometer = mSensorManager
                 .getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mProximitySensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
-        AWSMobileClient.getInstance().initialize(this, new AWSStartupHandler() {
-            @Override
-            public void onComplete(AWSStartupResult awsStartupResult) {
-                Toast.makeText(MainActivity.this,"YeeeY AWS", Toast.LENGTH_LONG).show();
-            }
-        }).execute();
+//        AWSMobileClient.getInstance().initialize(this, new AWSStartupHandler() {
+//            @Override
+//            public void onComplete(AWSStartupResult awsStartupResult) {
+//                Toast.makeText(MainActivity.this,"YeeeY AWS", Toast.LENGTH_LONG).show();
+//            }
+//        }).execute();
 
     }
 

@@ -1,5 +1,6 @@
 package com.android.gerajjjj.usefull;
 
+import android.annotation.SuppressLint;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
@@ -28,6 +29,7 @@ public class TouchWithAction implements View.OnTouchListener {
         this.action = action;
     };
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouch(View v, MotionEvent event) {
         if (actionTracked == -1){

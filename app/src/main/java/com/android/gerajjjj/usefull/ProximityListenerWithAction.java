@@ -3,6 +3,7 @@ package com.android.gerajjjj.usefull;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
+import android.util.Log;
 
 /**
  * React on proximity change
@@ -11,7 +12,7 @@ import android.hardware.SensorEventListener;
  */
 
 public class ProximityListenerWithAction implements SensorEventListener {
-    private ActionInterface action;
+    private final ActionInterface action;
     private boolean playing;
     public ProximityListenerWithAction(ActionInterface action){
         this.action = action;
